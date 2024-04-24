@@ -60,7 +60,7 @@ class Revendedor extends Pessoa {
     for (Produto produto in produtosVendidos) {
       totalVendido += produto.valor * produto.qtdVendida;
     }
-    return double.parse(totalVendido.toStringAsFixed(2).replaceAll('.', ','));
+    return double.parse(totalVendido.toStringAsFixed(2));
   }
 
   // Método responsável por calcular e retornar o lucro em reais obtido por aquele revendedor.

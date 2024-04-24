@@ -26,8 +26,8 @@ main() {
   divisoriaSimples();
   pularLinha();
 
-  print("Testes realizarVenda");
-  divisoriaSimples();
+  // print("Testes realizarVenda");
+  // divisoriaSimples();
   // produtoA.realizarVenda();
   // produtoA.realizarVenda();
   // produtoA.realizarVenda();
@@ -37,33 +37,33 @@ main() {
   // produtoD.realizarVenda();
   // produtoD.realizarVenda();
   // divisoriaSimples();
-  pularLinha();
+  // pularLinha();
   // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
   // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
 
   // Teste o método verReceitaGerada algumas vezes...
   // Exemplo: print(produtoA.verReceitaGerada());
-  print("Testes verReceitaGerada");
-  divisoriaSimples();
-  print(produtoA.verReceitaGerada());
-  print(produtoB.verReceitaGerada());
-  print(produtoC.verReceitaGerada());
-  print(produtoD.verReceitaGerada());
-  divisoriaSimples();
-  pularLinha();
-  print("Testes verReceitaGeradaFormatada");
-  divisoriaSimples();
-  produtoA.verReceitaGeradaFormatada();
-  produtoB.verReceitaGeradaFormatada();
-  produtoC.verReceitaGeradaFormatada();
-  produtoD.verReceitaGeradaFormatada();
-  divisoriaDupla();
-  pularLinha();
-  print("Produto A: $produtoA");
-  print("Produto B: $produtoB");
-  print("Produto C: $produtoC");
-  print("Produto D: $produtoD");
-  pularLinha();
+  // print("Testes verReceitaGerada");
+  // divisoriaSimples();
+  // print(produtoA.verReceitaGerada());
+  // print(produtoB.verReceitaGerada());
+  // print(produtoC.verReceitaGerada());
+  // print(produtoD.verReceitaGerada());
+  // divisoriaSimples();
+  // pularLinha();
+  // print("Testes verReceitaGeradaFormatada");
+  // divisoriaSimples();
+  // produtoA.verReceitaGeradaFormatada();
+  // produtoB.verReceitaGeradaFormatada();
+  // produtoC.verReceitaGeradaFormatada();
+  // produtoD.verReceitaGeradaFormatada();
+  // divisoriaDupla();
+  // pularLinha();
+  // print("Produto A: $produtoA");
+  // print("Produto B: $produtoB");
+  // print("Produto C: $produtoC");
+  // print("Produto D: $produtoD");
+  // pularLinha();
   /* ------------------------------------------ */
 
   /* Declaração de objetos Pessoa */
@@ -310,8 +310,26 @@ main() {
   divisoriaDupla();
   pularLinha();
 
+  print("Testes verReceitaGerada");
+  divisoriaSimples();
+  print(produtoA.verReceitaGerada());
+  print(produtoB.verReceitaGerada());
+  print(produtoC.verReceitaGerada());
+  print(produtoD.verReceitaGerada());
+  divisoriaSimples();
+  pularLinha();
+  print("Testes verReceitaGeradaFormatada");
+  divisoriaSimples();
+  produtoA.verReceitaGeradaFormatada();
+  produtoB.verReceitaGeradaFormatada();
+  produtoC.verReceitaGeradaFormatada();
+  produtoD.verReceitaGeradaFormatada();
+  divisoriaDupla();
+  pularLinha();
+
   print("Testes da classe Brinde");
   divisoriaSimples();
+
   Brinde brindeA =
       Brinde(nome: 'Colônia Egeo 10ml', pontosNecessarios: 1, qtdEmEstoque: 5);
   Brinde brindeB = Brinde(
