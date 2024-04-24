@@ -28,7 +28,7 @@ class Cliente extends Pessoa {
   // O método continua recebendo o parâmetro do tipo String, que representa a fala da pessoa.
   // Deve-se realizar um print da fala, mas especificando que é um cliente que está falando.
   void falar(String mensagem) {
-    print("Cliente $nome diz: $mensagem.");
+    print("Cliente $nome diz: $mensagem");
   }
 
   // Método responsável por adicionar dinheiro na carteira de um cliente.
@@ -37,7 +37,8 @@ class Cliente extends Pessoa {
   // Realizar um print dizendo quanto a pessoa tem no total após o acréscimo.
   void adicionarDineiro(double valor) {
     dinheiro += valor;
-    print("$nome possui agora ${dinheiro.toStringAsFixed(2)}");
+    print(
+        "$nome possui agora ${dinheiro.toStringAsFixed(2).replaceAll('.', ',')}");
   }
 
   // Método responsável por realizar uma compra de um produto com um revendedor.
@@ -50,10 +51,12 @@ class Cliente extends Pessoa {
         revendedor.venderProduto(produto);
         dinheiro = dinheiroPreCompra - produto.valor;
         pontos++;
-        String valorArredondado = produto.valor.toStringAsFixed(2);
+        String valorArredondado =
+            produto.valor.toStringAsFixed(2).replaceAll('.', ',');
         String dinheiroPreCompraArredondado =
             dinheiroPreCompra.toStringAsFixed(2);
-        String dinheiroArredondado = dinheiro.toStringAsFixed(2);
+        String dinheiroArredondado =
+            dinheiro.toStringAsFixed(2).replaceAll('.', ',');
         produtosComprados.add(produto);
         print("Valor do produto: R\$ " + valorArredondado);
         print("Saldo do cliente: R\$ " + dinheiroPreCompraArredondado);
@@ -98,7 +101,7 @@ class Cliente extends Pessoa {
   // Método que utiliza as funções criadas anteriormente e realiza um print do resumo de total gasto e média aritmética.
   void verResumo() {
     print(
-        'O Total gasto por $nome foi de ${calcularTotalGasto()} reais e a média de valor dos produtos comprados é ${calcularMediaProdutosComprados()} reais.');
+        'O Total gasto por $nome foi de ${calcularTotalGasto().toStringAsFixed(2).replaceAll('.', ',')} reais e a média de valor dos produtos comprados é ${calcularMediaProdutosComprados().toStringAsFixed(2).replaceAll('.', ',')} reais.');
   }
 
   // Método responsável ordenar a lista de produtos comprados com base no nome dos produtos.
@@ -112,7 +115,8 @@ class Cliente extends Pessoa {
 
     print('Produtos comprados por $nome:');
     for (var produto in produtosComprados) {
-      print('- Produto: ${produto.nome}, Valor: ${produto.valor} reais');
+      print(
+          '- Produto: ${produto.nome}, Valor: ${produto.valor.toStringAsFixed(2).replaceAll('.', ',')} reais');
     }
   }
 

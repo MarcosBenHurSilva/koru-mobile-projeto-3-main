@@ -112,7 +112,7 @@ main() {
   pessoaB.falar('Estou bem e você?');
   pessoaC.falar('Qual o melhor grupo do desenvolve?');
   pessoaA.falar('É o grupo Dartmode, eles são dedicados.');
-  pessoaA.falar('Sim, estão de parabéns');
+  pessoaA.falar('Sim, estão de parabéns.');
   pessoaD.falar('Oi pessoal sobre o que estão falando?');
   divisoriaSimples();
   pularLinha();
@@ -179,15 +179,14 @@ main() {
   revendedorB.falar('Estou vendendo muito bem e você Tereza?');
   revendedorC.falar('Também estou vendendo bem.');
   revendedorD.falar('Opa!');
-  divisoriaSimples();
   pularLinha();
-  print("Testes venderProduto");
-  divisoriaSimples();
-  print("Produto A: $produtoA");
-  print("Produto B: $produtoB");
-  print("Produto C: $produtoC");
-  print("Produto D: $produtoD");
-  divisoriaSimples();
+  // print("Testes venderProduto");
+  // divisoriaSimples();
+  // print("Produto A: $produtoA");
+  // print("Produto B: $produtoB");
+  // print("Produto C: $produtoC");
+  // print("Produto D: $produtoD");
+  // divisoriaSimples();
   // revendedorA.venderProduto(produtoA);
   // revendedorA.venderProduto(produtoB);
   // revendedorA.venderProduto(produtoC);
@@ -207,16 +206,6 @@ main() {
   // revendedorD.venderProduto(produtoC);
   // divisoriaSimples();
   // pularLinha();
-  print("Testes calcularLucro");
-  divisoriaSimples();
-  print(
-      "Lucro do revendedor ${revendedorA.nome} R\$:${revendedorA.calcularLucro()}");
-  print(
-      "Lucro do revendedor ${revendedorB.nome} R\$:${revendedorB.calcularLucro()}");
-  print(
-      "Lucro do revendedor ${revendedorC.nome} R\$:${revendedorC.calcularLucro()}");
-  print(
-      "Lucro do revendedor ${revendedorD.nome} R\$:${revendedorD.calcularLucro()}");
 
   divisoriaDupla();
   pularLinha();
@@ -270,8 +259,7 @@ main() {
   divisoriaSimples();
   pularLinha();
 
-  print(
-      "Testes adicionarDineiro, comprarProduto, verResumo, verProdutosComprados");
+  print("Testes adicionarDineiro");
   divisoriaSimples();
   clienteA.adicionarDineiro(1000.00);
   clienteB.adicionarDineiro(50.00);
@@ -280,7 +268,7 @@ main() {
   clienteC.adicionarDineiro(10000.00);
   clienteD.adicionarDineiro(50000.01);
   divisoriaSimples();
-  pularLinha();
+  print("Testes comprarProduto");
   clienteA.comprarProduto(produtoA, revendedorD);
   clienteA.comprarProduto(produtoA, revendedorD);
   clienteA.comprarProduto(produtoA, revendedorD);
@@ -296,18 +284,30 @@ main() {
   clienteD.comprarProduto(produtoB, revendedorA);
   clienteD.comprarProduto(produtoB, revendedorB);
   divisoriaSimples();
-  pularLinha();
+
+  print("Testes calcularLucro");
+  divisoriaSimples();
+  print(
+      "Lucro do revendedor ${revendedorA.nome} R\$:${revendedorA.calcularLucro().toStringAsFixed(2).replaceAll('.', ',')}");
+  print(
+      "Lucro do revendedor ${revendedorB.nome} R\$:${revendedorB.calcularLucro().toStringAsFixed(2).replaceAll('.', ',')}");
+  print(
+      "Lucro do revendedor ${revendedorC.nome} R\$:${revendedorC.calcularLucro().toStringAsFixed(2).replaceAll('.', ',')}");
+  print(
+      "Lucro do revendedor ${revendedorD.nome} R\$:${revendedorD.calcularLucro().toStringAsFixed(2).replaceAll('.', ',')}");
+  divisoriaSimples();
+  print("Testes verResumo");
   revendedorA.verResumo();
   revendedorB.verResumo();
-  revendedorC.verResumo;
-  revendedorD.verResumo;
+  revendedorC.verResumo();
+  revendedorD.verResumo();
   divisoriaSimples();
-  pularLinha();
+  print("Testes verProdutosComprados");
   clienteA.verProdutosComprados();
   clienteB.verProdutosComprados();
   clienteC.verProdutosComprados();
   clienteD.verProdutosComprados();
-  divisoriaDupla();
+  divisoriaSimples();
   pularLinha();
 
   print("Testes verReceitaGerada");
